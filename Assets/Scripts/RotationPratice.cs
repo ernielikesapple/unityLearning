@@ -22,10 +22,11 @@ public class RotationPratice : MonoBehaviour        // when renaming a file, rem
         // // Debug.Log("Count= " + frameCounter++ ); // 
         // randomCube.transform.position = new Vector3(Mathf.Sin(rCubeCounter), Mathf.Cos(rCubeCounter), 0);
         if (Input.GetMouseButton(0)) {  // click the left mouse, 
+            /*
             float h = rotateSpeed * Input.GetAxis("Mouse X");  // see the name in the Edit ->  Project Settings -> Input Manager -> Axes
             float v = rotateSpeed * Input.GetAxis("Mouse Y");
-            randomCube.transform.Rotate(v, -h, 0,  Space.World);
-
+            randomCube.transform.Rotate(v, -h, 0,  Space.Self);
+            */
 
 
 
