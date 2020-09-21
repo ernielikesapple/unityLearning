@@ -3,7 +3,7 @@
     <Files>
       <File FileName="Assets/Scripts/RotationPratice.cs" Line="24" Column="40" />
       <File FileName="Assets/Scripts/MouseLook.cs" Line="27" Column="131" />
-      <File FileName="Assets/Scripts/PlayerMovementScript.cs" Line="44" Column="21" />
+      <File FileName="Assets/Scripts/PlayerMovementScript.cs" Line="25" Column="41" />
       <File FileName="Assets/Scripts/gravityBody.cs" Line="1" Column="1" />
     </Files>
     <Pads>

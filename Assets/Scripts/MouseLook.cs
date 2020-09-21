@@ -20,8 +20,8 @@ public class MouseLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;  // Time.deltaTime, the usage to be verifed
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;  // Time.deltaTime, the usage to be verifed
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;  // gives a changing value per second instead of per frame make it more sooth
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;  // gives a changing value per second instead of per frame make it more sooth
 
         if (Input.GetMouseButton(0)) {
             playerBody.Rotate(Vector3.up * mouseX);   // rotate along the y    when the user try to move the camera left and right
