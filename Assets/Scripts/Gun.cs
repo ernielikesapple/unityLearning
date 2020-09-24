@@ -16,9 +16,12 @@ public class Gun : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            GameObject newBullet = Instantiate(bullet);
-            newBullet.transform.position = transform.position + transform.up; // when instantiate let the bullet appear right in front of the gun
+            GameObject newBullet = ObjectPool.SharedInstance.GetPooledObject(); // pre initialized bullets from ObjectPool.cs
 
+
+            newBullet.transform.position = transform.position + transform.up; // when instantiate let the bullet appear right in front of the gun
+            newBullet.GetComponent<Rigidbody>().velocity = transform.up * 25 ;
+            newBullet.SetActive(true);
         }
         
     }
