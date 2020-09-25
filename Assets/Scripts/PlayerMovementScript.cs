@@ -30,20 +30,14 @@ public class PlayerMovementScript : MonoBehaviour
         // Returns true if there are any colliders overlapping the sphere defined by position and radius in world coordinates.
         // true 当地面和球形状有接触就是true
 
-        Debug.Log("==goundCheck.position==" + goundCheck.position + "===goundCheck.localPosition====" + goundCheck.localPosition);
-
-        Debug.Log("==planeGround.position==" + planeGround.transform.position + "===planeGround.localPosition====" + planeGround.transform.localPosition);
-
-
-        Debug.Log("=----velocity.y---1111--==" + velocity.y);
-        Debug.Log("=isGrounded==" + isGrounded);
-
+        // Debug.Log("==goundCheck.position==" + goundCheck.position + "===goundCheck.localPosition====" + goundCheck.localPosition);
+        // Debug.Log("==planeGround.position==" + planeGround.transform.position + "===planeGround.localPosition====" + planeGround.transform.localPosition);
+        // Debug.Log("=----velocity.y---1111--==" + velocity.y);
+        // Debug.Log("=isGrounded==" + isGrounded);
 
         if (isGrounded && velocity.y < 0) {  // do a reset
             velocity.y = -2f;
         }
-
-        Debug.Log("=----velocity.y---2222--==" + velocity.y);
 
         float x = Input.GetAxis("Horizontal");  // controller pour à gauche et à droit
         float z = Input.GetAxis("Vertical");
@@ -53,7 +47,7 @@ public class PlayerMovementScript : MonoBehaviour
 
 
         velocity.y += gravity * 1.8f * Time.deltaTime;  // applied gravity
-        Debug.Log("=----velocity.y---3333--==" + velocity.y);
+        
         gameProtagonist.Move(velocity * Time.deltaTime);
 
         if (Input.GetButtonDown("Jump") && isGrounded) {
