@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
@@ -11,7 +9,11 @@ public class Gun : MonoBehaviour
     public float range = 100f; // change this var to adjust how far the gun can hit
 
 
-    public Camera fpsCamera;  // shoot a ray starting at the position of the camera  
+    public Camera fpsCamera;  // shoot a ray starting at the position of the camera
+    public ParticleSystem muzzelFlash;  // the explosive effect in the gun
+    public GameObject impactEffect; // the gun effect when the gun hit sth
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,10 @@ public class Gun : MonoBehaviour
     }
 
     void Shoot() {
+
+        muzzelFlash.Play();
+
+
         RaycastHit hit;  // var to hold the info about what we hit
 
         if (Physics.Raycast(fpsCamera.transform.position, fpsCamera.transform.forward, out hit, range)) {
@@ -50,7 +56,11 @@ public class Gun : MonoBehaviour
             }
 
             Debug.Log(hit.transform.name);
-              
+
+    
+            GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));  // take a direction and turn it into a quaternion and 
+            Destroy(impactGO, 2f);
+
         }
 
 
