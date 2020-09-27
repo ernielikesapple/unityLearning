@@ -14,12 +14,12 @@ public class MouseLook : MonoBehaviour
     public Camera fpsCamera;  // shoot a ray starting at the position of the camera
     public GameObject crosshair;
 
-    public Image[] crosshairImagesArray;
+    public RawImage[] crosshairImagesArray;
 
     // Start is called before the first frame update
     void Start()
     {
-        crosshairImagesArray = crosshair.GetComponentsInChildren<Image>();
+        crosshairImagesArray = crosshair.GetComponentsInChildren<RawImage>();
     }
 
     // Update is called once per frame
@@ -55,9 +55,9 @@ public class MouseLook : MonoBehaviour
 
                 if (distance < 7) // todo: if the distance smaller than 5f, make the crosshair bigger
                 {
-                   foreach (Image im in crosshairImagesArray)
+                   foreach (RawImage im in crosshairImagesArray)
                     {
-                        im.GetComponent<Image>().color = Color.red;    
+                        im.GetComponent<RawImage>().color = Color.red;    
                     }
 
                    // crosshair.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, Camera.main.nearClipPlane));
@@ -68,18 +68,18 @@ public class MouseLook : MonoBehaviour
                 }
                 else
                 {
-                    foreach (Image im in crosshairImagesArray)
+                    foreach (RawImage im in crosshairImagesArray)
                     {
-                        im.GetComponent<Image>().color = Color.white;
+                        im.GetComponent<RawImage>().color = Color.white;
                     }
                     crosshair.transform.localScale = new Vector3(1, 1, 1);
                 }
             }
             else
             {
-                foreach (Image im in crosshairImagesArray)
+                foreach (RawImage im in crosshairImagesArray)
                 {
-                    im.GetComponent<Image>().color = Color.white;
+                    im.GetComponent<RawImage>().color = Color.white;
                 }
                 crosshair.transform.localScale = new Vector3(1, 1, 1);
             }
