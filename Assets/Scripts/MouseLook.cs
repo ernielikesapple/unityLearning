@@ -31,7 +31,6 @@ public class MouseLook : MonoBehaviour
         if (Input.GetMouseButton(0)) {
             playerBody.Rotate(Vector3.up * mouseX);   // rotate along the y    when the user try to move the camera left and right
 
-
             xRotation -= mouseY; // todo::verify what these code does ?????
             // xRotation = Mathf.Clamp(xRotation, -90, 90);  // give xRotation a restrain
             transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);  // todo::verify what these code does ?????,  when the user try to move the camera up and down
@@ -47,24 +46,15 @@ public class MouseLook : MonoBehaviour
             Enemy enemy = hit.transform.GetComponent<Enemy>();
             if (enemy != null)
             {
-                // todo: change the color of
-                
-                
+                // change the color of crosshair and scale of the image
                 float distance = Vector3.Distance(fpsCamera.transform.position, enemy.transform.position);
-                Debug.Log("SADFDSFDGFD=====" + distance);
-
-                if (distance < 7) // todo: if the distance smaller than 5f, make the crosshair bigger
+                if (distance < 7) // if the distance smaller than 5f, make the crosshair bigger
                 {
                    foreach (RawImage im in crosshairImagesArray)
                     {
                         im.GetComponent<RawImage>().color = Color.red;    
                     }
-
-                   // crosshair.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, Camera.main.nearClipPlane));
                     crosshair.transform.localScale = new Vector3(2, 2, 1);
-                    //crosshair.transform.position = new Vector3(0, 0, 0);
-                    //new Vector3(Screen.width * 0.5f, Screen.height * 0.5f, 0);
-
                 }
                 else
                 {
@@ -85,9 +75,6 @@ public class MouseLook : MonoBehaviour
             }
 
         }
-
-
-
 
     }
 }
