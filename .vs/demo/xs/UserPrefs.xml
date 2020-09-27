@@ -1,15 +1,10 @@
 ﻿<Properties StartupConfiguration="{C132594A-928C-86DF-54BB-28617E4DB357}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GenerateEnemy.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MouseLook.cs">
     <Files>
-      <File FileName="Assets/Scripts/Gun.cs" Line="10" Column="8" />
-      <File FileName="Assets/Scripts/RotationPratice.cs" Line="24" Column="40" />
-      <File FileName="Assets/Scripts/MouseLook.cs" Line="24" Column="163" />
-      <File FileName="Assets/Scripts/PlayerMovementScript.cs" Line="43" Column="20" />
-      <File FileName="Assets/Scripts/gravityBody.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ObjectPool.cs" Line="31" Column="38" />
-      <File FileName="Assets/Scripts/Bullet.cs" Line="19" Column="25" />
-      <File FileName="Assets/Scripts/Enemy.cs" Line="7" Column="111" />
-      <File FileName="Assets/Scripts/GenerateEnemy.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Gun.cs" Line="49" Column="8" />
+      <File FileName="Assets/Scripts/MouseLook.cs" Line="14" Column="33" />
+      <File FileName="Assets/Scripts/PlayerMovementScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Enemy.cs" Line="31" Column="31" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,7 +12,7 @@
           <Node name="demo" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="GenerateEnemy.cs" selected="True" />
+                <Node name="MouseLook.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -27,7 +22,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="afb1fb46-9ca1-47dc-876e-84ebb811a194" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4b5a3781-a884-4b6c-853b-d2b26d787133" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

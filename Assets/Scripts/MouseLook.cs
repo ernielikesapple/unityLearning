@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MouseLook : MonoBehaviour
 {
@@ -10,11 +11,15 @@ public class MouseLook : MonoBehaviour
 
     float xRotation = 0f; // todo::verify what these code does ?????
 
+    public Camera fpsCamera;  // shoot a ray starting at the position of the camera
+    public GameObject crosshair;
+
+    public Image[] crosshairImagesArray;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        crosshairImagesArray = crosshair.GetComponentsInChildren<Image>();
     }
 
     // Update is called once per frame
@@ -33,7 +38,56 @@ public class MouseLook : MonoBehaviour
 
         }
 
-        
+        RaycastHit hit;  // var to hold the info about what we hit
+
+        if (Physics.Raycast(fpsCamera.transform.position, fpsCamera.transform.forward, out hit))
+        {
+            // start at the position of the fpsCamera, towards the front, output all the info into the var hit, with the range in range var,
+            // return true if we hit sth
+            Enemy enemy = hit.transform.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                // todo: change the color of
+                
+                
+                float distance = Vector3.Distance(fpsCamera.transform.position, enemy.transform.position);
+                Debug.Log("SADFDSFDGFD=====" + distance);
+
+                if (distance < 7) // todo: if the distance smaller than 5f, make the crosshair bigger
+                {
+                   foreach (Image im in crosshairImagesArray)
+                    {
+                        im.GetComponent<Image>().color = Color.red;    
+                    }
+
+                   // crosshair.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, Camera.main.nearClipPlane));
+                    crosshair.transform.localScale = new Vector3(2, 2, 1);
+                    //crosshair.transform.position = new Vector3(0, 0, 0);
+                    //new Vector3(Screen.width * 0.5f, Screen.height * 0.5f, 0);
+
+                }
+                else
+                {
+                    foreach (Image im in crosshairImagesArray)
+                    {
+                        im.GetComponent<Image>().color = Color.white;
+                    }
+                    crosshair.transform.localScale = new Vector3(1, 1, 1);
+                }
+            }
+            else
+            {
+                foreach (Image im in crosshairImagesArray)
+                {
+                    im.GetComponent<Image>().color = Color.white;
+                }
+                crosshair.transform.localScale = new Vector3(1, 1, 1);
+            }
+
+        }
+
+
+
 
     }
 }

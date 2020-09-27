@@ -55,6 +55,9 @@ public class Gun : MonoBehaviour
             if (enemy != null) {
                 enemy.TakeDamage(damage);
 
+                float distance = Vector3.Distance(fpsCamera.transform.position, enemy.transform.position);
+                Debug.Log("SADFDSFDGFD=====" + distance);
+
             }
 
             if (hit.rigidbody != null)
