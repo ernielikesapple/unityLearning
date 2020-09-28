@@ -63,16 +63,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Bullet.cs" />
-    <Compile Include="Assets\Scripts\Enemy.cs" />
-    <Compile Include="Assets\Scripts\GenerateEnemy.cs" />
-    <Compile Include="Assets\Scripts\Gun.cs" />
-    <Compile Include="Assets\Scripts\MouseLook.cs" />
-    <Compile Include="Assets\Scripts\ObjectPool.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovementScript.cs" />
-    <Compile Include="Assets\Scripts\RotationPratice.cs" />
-    <Compile Include="Assets\Scripts\gravityBody.cs" />
-    <Compile Include="Assets\Scripts\playerManager.cs" />
+    <Compile Include="Assets\source_hang_cheng\Bullet.cs" />
+    <Compile Include="Assets\source_hang_cheng\Enemy.cs" />
+    <Compile Include="Assets\source_hang_cheng\GenerateEnemy.cs" />
+    <Compile Include="Assets\source_hang_cheng\Gun.cs" />
+    <Compile Include="Assets\source_hang_cheng\MouseLook.cs" />
+    <Compile Include="Assets\source_hang_cheng\ObjectPool.cs" />
+    <Compile Include="Assets\source_hang_cheng\PlayerMovementScript.cs" />
+    <Compile Include="Assets\source_hang_cheng\RotationPratice.cs" />
+    <Compile Include="Assets\source_hang_cheng\gravityBody.cs" />
+    <Compile Include="Assets\source_hang_cheng\playerManager.cs" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2019.4.4f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
