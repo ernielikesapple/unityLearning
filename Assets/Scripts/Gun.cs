@@ -65,7 +65,7 @@ public class Gun : MonoBehaviour
                 hit.rigidbody.AddForce(-hit.normal * impactForce);
             }
 
-            Debug.Log(hit.transform.name);
+            Debug.Log("i hit ici---" + hit.transform.name);
 
     
             GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));  // take a direction and turn it into a quaternion and 
